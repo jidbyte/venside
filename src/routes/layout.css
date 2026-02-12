@@ -1,3 +1,51 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+@plugin 'daisyui' {
+	themes:
+		winter --default,
+		night --prefersdark;
+}
+
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
+
+@theme inline {
+	--color-surface: var(--surface);
+	--color-ink: var(--ink);
+	--color-primary: var(--primary);
+	--color-secondary: var(--secondary);
+	--color-neutral: var(--neutral);
+	--color-muted: var(--muted);
+
+	--color-focus: var(--focus);
+	--color-accent: var(--accent);
+	--color-destructive: var(--destructive);
+}
+
+:root {
+	--primary: #0c86b2;
+	--secondary: #91edf3;
+	--surface: #fefefe;
+	--ink: #111827;
+	--neutral: #d1d5db;
+	--muted: #f9fafb;
+}
+
+.dark {
+	--primary: #91edf3;
+	--secondary: #0c86b2;
+	--surface: #111827;
+	--ink: #fbf8f8;
+	--neutral: #6b7280;
+	--muted: #1f2937;
+}
+
+@layer base {
+	body {
+		@apply bg-surface text-ink/90;
+	}
+
+	.central {
+		@apply grid min-h-screen w-full place-content-center;
+	}
+}
