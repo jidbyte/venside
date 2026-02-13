@@ -1,4 +1,3 @@
-<!-- CardContent.svelte -->
 <script lang="ts">
 	import { cn } from '$lib/core/utils/common';
 	import type { Snippet } from 'svelte';

@@ -5,14 +5,14 @@
 	import type { Snippet } from 'svelte';
 
 	const buttonVariants = cva(
-		'inline-flex items-center justify-center font-semibold p-2 rounded-md shadow-xs hover:shadow-sm transition-all active:scale-[0.98] aria-disabled:pointer-events-none disabled:opacity-60 disabled:pointer-events-none rounded-input',
+		'inline-flex gap-1 items-center justify-center font-semibold p-2 rounded-md shadow-xs hover:shadow-sm transition-all active:scale-[0.98] aria-disabled:pointer-events-none disabled:opacity-60 disabled:pointer-events-none rounded-input',
 		{
 			variants: {
 				variant: {
 					default: 'bg-primary text-surface hover:bg-primary/80',
 					secondary: 'bg-secondary text-ink hover:bg-secondary/80',
 					neutral: 'bg-neutral text-ink hover:bg-neutral/80',
-					focus: 'bg-ink text-surface hover:bg-ink/80',
+					focus: 'bg-ink/90 text-surface hover:bg-ink',
 					ghost: 'bg-muted text-ink hover:text-gray-500 dark:hover:text-gray-200',
 					link: 'bg-none shadow-none hover:shadow-none text-primary hover:underline underline-offset-3',
 					outline: 'bg-none border hover:border-primary hover:text-primary',
